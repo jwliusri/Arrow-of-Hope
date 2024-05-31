@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Crab
   healthpoint: 25
   speed: 0.5
-  damage: 1
-  attackCooldownSecond: 1
-  attackRange: 1
+  damage: 6
+  attackCooldownSecond: 2
+  attackRange: 0.75
   sprite: {fileID: 8585974811015355561, guid: fcdaab11fdb1a4a4abde6342c7c7714e, type: 3}

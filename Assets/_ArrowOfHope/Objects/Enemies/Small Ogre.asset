@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Small Ogre
   healthpoint: 13
   speed: 1
-  damage: 1
+  damage: 3
   attackCooldownSecond: 1
-  attackRange: 1
+  attackRange: 0.75
   sprite: {fileID: -2796727066320189465, guid: fcdaab11fdb1a4a4abde6342c7c7714e, type: 3}
