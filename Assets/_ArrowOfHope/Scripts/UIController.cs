@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject gameOverUIScene;
 
     [SerializeField] private TextMeshProUGUI gameElapsedTimeText;
+    [SerializeField] private Slider wallHealthBar;
 
     public bool isInitialized { get; private set; } = false;
     public UIScene activeUIScene { get; private set; } = UIScene.None;
@@ -54,6 +56,11 @@ public class UIController : MonoBehaviour
             float elapsedTime = gameController.enemySpawner.elapsedTime;
             gameElapsedTimeText.text = TimeSpan.FromSeconds(elapsedTime).ToString(@"mm\:ss");
         }
+    }
+
+    public void UpdateWallHealthBar(float n)
+    {
+        wallHealthBar.value = n;
     }
 
     void SetActiveUIScene(UIScene uiScene)
