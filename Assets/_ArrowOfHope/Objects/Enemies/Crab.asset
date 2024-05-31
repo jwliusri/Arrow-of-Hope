@@ -18,5 +18,5 @@ MonoBehaviour:
   speed: 0.5
   damage: 1
   attackCooldownSecond: 1
-  attackRange: 0.5
+  attackRange: 1
   sprite: {fileID: 8585974811015355561, guid: fcdaab11fdb1a4a4abde6342c7c7714e, type: 3}
