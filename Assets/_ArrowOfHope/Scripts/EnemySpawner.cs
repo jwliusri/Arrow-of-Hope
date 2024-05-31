@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -11,45 +13,40 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float spawnerOffset = -2;
     [SerializeField] int spawnPointQty = 4;
 
+    public bool isInitialized { get; private set; } = false;
+    public float elapsedTime { get; private set; } = 0f;
     private Stack<EnemySpawnData> enemySpawnStack;
-    private float elapsedTime = 0f;
     private GameObject[] spawnPoints;
+    private bool spawnDataParsed, spawnPointCreated = false;
+    private GameController gameController;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    IEnumerator Start()
     {
-        //List<EnemySpawnData> list = new();
-        //for (int i = 0; i < spawnPointQty; i++)
-        //{
-        //    for (int j = 0; j < 1; j++)
-        //    {
-
-        //        list.Add(new EnemySpawnData()
-        //        {
-        //            time = 1 + j*2,
-        //            enemyID = "dummy-enemy",
-        //            spawnPointIndex = i,
-        //        });
-        //    }
-        //}
-
-        //enemySpawnStack = new(list.OrderByDescending(x => x.time));
+        yield return new WaitUntil(() => GameController.Instance != null);
+        gameController = GameController.Instance;
 
         ParseSpawnData();
         CreateSpawnerPoints();
+        yield return new WaitUntil(() => spawnDataParsed && spawnPointCreated );
+        isInitialized = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        elapsedTime += Time.deltaTime;
-        while (enemySpawnStack.Count > 0 && enemySpawnStack.Peek().time < elapsedTime)
+        if (gameController == null) return;
+        if (gameController.gameState == GameController.GameState.Started)
         {
-            var enemySpawnData = enemySpawnStack.Pop();
-            //Debug.Log($"spawn {enemySpawnData.enemyID}");
-            var enemy = Instantiate(enemyPrefab, spawnPoints[enemySpawnData.spawnPointIndex].transform.position, Quaternion.identity);
-            var enemyData = enemyDatabase.Find(enemySpawnData.enemyID);
-            enemy.GetComponent<EnemyController>().SetEnemyData(enemyData);
+            elapsedTime += Time.deltaTime;
+            while (enemySpawnStack.Count > 0 && enemySpawnStack.Peek().time < elapsedTime)
+            {
+                var enemySpawnData = enemySpawnStack.Pop();
+                //Debug.Log($"spawn {enemySpawnData.enemyID}");
+                var enemy = Instantiate(enemyPrefab, spawnPoints[enemySpawnData.spawnPointIndex].transform.position, Quaternion.identity);
+                var enemyData = enemyDatabase.Find(enemySpawnData.enemyID);
+                enemy.GetComponent<EnemyController>().SetEnemyData(enemyData);
+            }
         }
     }
 
@@ -67,6 +64,7 @@ public class EnemySpawner : MonoBehaviour
             spawnPoint.transform.position = new Vector3(spawnerDistance * (i + 1) + screenLeftWorldPoint.x, screenLeftWorldPoint.y + spawnerOffset);
             spawnPoints[i] = spawnPoint;
         }
+        spawnPointCreated = true;
     }
 
     private void ParseSpawnData()
@@ -99,5 +97,6 @@ public class EnemySpawner : MonoBehaviour
             }
         }
         enemySpawnStack = new(list.OrderByDescending(x => x.time));
+        spawnDataParsed = true;
     }
 }
