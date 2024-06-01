@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private PlayerController _playerController;
 
     public static GameController Instance;
+    private static bool startImmediately = false;
 
     public UIController uiController => _uiController;
     public EnemySpawner enemySpawner => _enemySpawner;
@@ -25,7 +27,7 @@ public class GameController : MonoBehaviour
             DestroyImmediate(gameObject);
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject); // restart by reload scene
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -40,6 +42,7 @@ public class GameController : MonoBehaviour
             ;
         });
         ChangeGameState(GameState.Ready);
+        if (startImmediately) StartGame();
     }
 
     // Update is called once per frame
@@ -62,7 +65,15 @@ public class GameController : MonoBehaviour
         if (gameState == GameState.Started)
         {
             ChangeGameState(GameState.Over);
+            _playerController.enabled = false;
         }
+    }
+
+    public void ReloadScene()
+    {
+        Instance = null;
+        startImmediately = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void ChangeGameState(GameState state)

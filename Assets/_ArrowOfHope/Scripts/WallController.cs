@@ -24,5 +24,6 @@ public class WallController : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
+        GameController.Instance.GameOver();
     }
 }
