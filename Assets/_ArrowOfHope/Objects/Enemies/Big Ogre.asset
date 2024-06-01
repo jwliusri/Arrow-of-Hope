@@ -20,3 +20,5 @@ MonoBehaviour:
   attackCooldownSecond: 1
   attackRange: 1
   sprite: {fileID: -2796727066320189465, guid: fcdaab11fdb1a4a4abde6342c7c7714e, type: 3}
+  spriteColor: {r: 1, g: 0.4745098, b: 0.4745098, a: 1}
+  scale: {x: 1.5, y: 1.5, z: 1}

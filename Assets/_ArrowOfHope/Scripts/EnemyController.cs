@@ -84,9 +84,11 @@ public class EnemyController : MonoBehaviour
         healthpoint = enemyData.Healthpoint;
         var spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         spriteRenderer.sprite = enemyData.Sprite;
+        spriteRenderer.color = enemyData.SpriteColor;
         //GetComponent<BoxCollider2D>().size = spriteRenderer.bounds.size;
         if (coll == null) coll = GetComponent<CapsuleCollider2D>();
         coll.size = spriteRenderer.bounds.size;
+        transform.localScale = enemyData.Scale;
     }
 
     public void TakeDamage(float damage)

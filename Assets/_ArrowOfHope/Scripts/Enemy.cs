@@ -11,6 +11,8 @@ public class Enemy : ScriptableObject
     [SerializeField] private float attackCooldownSecond = 1f;
     [SerializeField] private float attackRange = .5f;
     [SerializeField] private Sprite sprite;
+    [SerializeField] private Color spriteColor = Color.white;
+    [SerializeField] private Vector3 scale = Vector3.one;
 
     public string Id => id;
     public string DisplayName => displayName;
@@ -20,4 +22,6 @@ public class Enemy : ScriptableObject
     public float AttackCooldownSecond => attackCooldownSecond;
     public float AttackRange => attackRange;
     public Sprite Sprite => sprite;
+    public Color SpriteColor => spriteColor;
+    public Vector3 Scale => scale;
 }
