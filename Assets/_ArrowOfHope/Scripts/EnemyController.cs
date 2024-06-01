@@ -12,6 +12,7 @@ public class EnemyController : MonoBehaviour
     private Animator animator;
     private CapsuleCollider2D coll;
     private FlashEffect flashEffect;
+    private AudioSource audioSource;
 
     private bool isMoveToTarget = true;
     private bool isDead = false;
@@ -28,6 +29,7 @@ public class EnemyController : MonoBehaviour
         animator = GetComponent<Animator>();
         coll = GetComponent<CapsuleCollider2D>();
         flashEffect = GetComponentInChildren<FlashEffect>();
+        audioSource = GetComponentInChildren<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -94,6 +96,7 @@ public class EnemyController : MonoBehaviour
         healthpoint -= damage;
         staggerTimer = staggerTime;
         flashEffect.Trigger(damageFlashColor, damageFlashTime);
+        audioSource.Play();
         if (healthpoint <= 0)
         {
             Die();

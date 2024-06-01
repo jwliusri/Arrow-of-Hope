@@ -12,13 +12,15 @@ public class PlayerController : MonoBehaviour
 
     InputAction attackAction;
 
+    private AudioSource audioSource;
+
     private float shootCooldownTimer = 0f;
     private bool isShootOnCooldown => shootCooldownTimer > 0f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         attackAction = InputSystem.actions.FindAction("Attack");
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -46,5 +48,6 @@ public class PlayerController : MonoBehaviour
     {
         shootCooldownTimer = shootCooldownSecond;
         GameObject arrow = Instantiate(arrowPrefab, pointOfShoot.position, pointOfShoot.rotation);
+        audioSource.Play();
     }
 }

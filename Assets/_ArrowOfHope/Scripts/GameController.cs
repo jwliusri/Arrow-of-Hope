@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private UIController _uiController;
     [SerializeField] private EnemySpawner _enemySpawner;
     [SerializeField] private PlayerController _playerController;
+    [SerializeField] private GameObject[] activateOnStart;
 
     public static GameController Instance;
     private static bool startImmediately = false;
@@ -33,6 +34,13 @@ public class GameController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     IEnumerator Start()
     {
+        if (activateOnStart != null)
+        {
+            foreach (var go in activateOnStart)
+            {
+                go.SetActive(true);
+            }
+        }
         _playerController.enabled = false;
         yield return new WaitUntil(() =>
         {
