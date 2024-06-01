@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Spider
   healthpoint: 2
   speed: 2
-  damage: 1
-  attackCooldownSecond: 1
-  attackRange: 1
+  damage: 0.5
+  attackCooldownSecond: 0.5
+  attackRange: 0.75
   sprite: {fileID: 7088928152256669780, guid: fcdaab11fdb1a4a4abde6342c7c7714e, type: 3}

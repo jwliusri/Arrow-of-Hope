@@ -17,6 +17,6 @@ MonoBehaviour:
   healthpoint: 6
   speed: 1.5
   damage: 1
-  attackCooldownSecond: 1
-  attackRange: 1
+  attackCooldownSecond: 0.5
+  attackRange: 0.75
   sprite: {fileID: -5111703912395106863, guid: fcdaab11fdb1a4a4abde6342c7c7714e, type: 3}
