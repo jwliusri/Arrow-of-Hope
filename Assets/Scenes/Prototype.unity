@@ -12614,6 +12614,9 @@ MonoBehaviour:
   enemyPrefab: {fileID: 528427910387846891, guid: 04dc1742579243843ad44f8ca3454172, type: 3}
   spawnerOffset: -2
   spawnPointQty: 10
+  gameEndSpawnSpamCooldown: 2
+  gameEndEnemies:
+  - {fileID: 11400000, guid: f1114e56dbc3c8d40b2977d3b05dc788, type: 2}
 --- !u!1 &2025676010
 GameObject:
   m_ObjectHideFlags: 0

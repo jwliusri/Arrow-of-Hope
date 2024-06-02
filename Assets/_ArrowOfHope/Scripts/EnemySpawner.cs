@@ -12,6 +12,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] float spawnerOffset = -2;
     [SerializeField] int spawnPointQty = 4;
+    [SerializeField] float gameEndSpawnSpamCooldown = 3f;
+    [SerializeField] Enemy[] gameEndEnemies;
 
     public bool isInitialized { get; private set; } = false;
     public float elapsedTime { get; private set; } = 0f;
@@ -19,6 +21,7 @@ public class EnemySpawner : MonoBehaviour
     private GameObject[] spawnPoints;
     private bool spawnDataParsed, spawnPointCreated = false;
     private GameController gameController;
+    private float gameEndSpawnSpamTimer = 0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     IEnumerator Start()
@@ -46,6 +49,20 @@ public class EnemySpawner : MonoBehaviour
                 var enemy = Instantiate(enemyPrefab, spawnPoints[enemySpawnData.spawnPointIndex].transform.position, Quaternion.identity);
                 var enemyData = enemyDatabase.Find(enemySpawnData.enemyID);
                 enemy.GetComponent<EnemyController>().SetEnemyData(enemyData);
+            }
+            if (enemySpawnStack.Count == 0 && gameEndEnemies.Length > 0)
+            {
+                if (gameEndSpawnSpamTimer > 0) gameEndSpawnSpamTimer -= Time.deltaTime;
+                else
+                {
+                    for (int i = 0; i < spawnPointQty; i++)
+                    {
+                        var enemyData = gameEndEnemies[UnityEngine.Random.Range(0, gameEndEnemies.Length)];
+                        var enemy = Instantiate(enemyPrefab, spawnPoints[i].transform.position, Quaternion.identity);
+                        enemy.GetComponent<EnemyController>().SetEnemyData(enemyData);
+                    }
+                    gameEndSpawnSpamTimer = gameEndSpawnSpamCooldown;
+                }
             }
         }
     }
