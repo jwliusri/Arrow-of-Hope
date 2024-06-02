@@ -596,6 +596,6 @@ Time (s) \ Spawnpoint,0,1,2,3,4,5,6,7,8,9
 595,,,,spider,,,,,,
 596,,ghost,,,,,,,,
 597,,,,,,,,small ogre,,
-598,small ogre,,,,bat,,,,,
-599,,,small ogre,,,,small ogre,,small ogre,
-600,,big ogre,,,,spider,,big ogre,,bat
+598,,,,,bat,,,,,
+599,,,,,,,,,,
+600,,,,,,spider,,,,bat
