@@ -15,7 +15,7 @@ public class WallController : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        Debug.Log($"{gameObject.name} take {damage} damage");
+        //Debug.Log($"{gameObject.name} take {damage} damage");
         healthpoint -= damage;
         GameController.Instance.uiController.UpdateWallHealthBar(healthpoint/maxHealthpoint);
         audioSource.Play();

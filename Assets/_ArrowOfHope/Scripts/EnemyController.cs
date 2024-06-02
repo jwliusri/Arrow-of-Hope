@@ -94,7 +94,7 @@ public class EnemyController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         if (isDead) return;
-        Debug.Log($"{gameObject.name} take {damage} damage");
+        //Debug.Log($"{gameObject.name} take {damage} damage");
         healthpoint -= damage;
         staggerTimer = staggerTime;
         flashEffect.Trigger(damageFlashColor, damageFlashTime);
