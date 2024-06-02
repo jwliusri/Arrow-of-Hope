@@ -13174,7 +13174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDatabase: {fileID: 897328387}
-  enemyWaveCSV: {fileID: 4900000, guid: d6e17c0041a61784084db114837eb828, type: 3}
+  enemyWaveCSV: {fileID: 4900000, guid: b667f6f3ed91b3a48a794561e46113f7, type: 3}
   enemyPrefab: {fileID: 528427910387846891, guid: 04dc1742579243843ad44f8ca3454172, type: 3}
   spawnerOffset: -2
   spawnPointQty: 10
