@@ -1,22 +1,31 @@
 fileFormatVersion: 2
-guid: b969177c61a82c040a166ce3b7879bab
+guid: 6db50bd9294715f45b35888159eded03
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1673732733077124514
-    second: trees_0
+      213: 317010468468323505
+    second: gameover_0
   - first:
-      213: 3611188691014843535
-    second: trees_1
+      213: 4500970960352770634
+    second: gameover_1
   - first:
-      213: 2249915519335348110
-    second: trees_2
+      213: 7846820034637804003
+    second: gameover_2
   - first:
-      213: 5223556475179290604
-    second: trees_3
+      213: -1303687684276611485
+    second: gameover_3
   - first:
-      213: 384058854656272681
-    second: trees_4
+      213: 2200968303363549662
+    second: gameover_4
+  - first:
+      213: -4310058061554761629
+    second: gameover_5
+  - first:
+      213: -6410328098414253093
+    second: gameover_6
+  - first:
+      213: -4372939249491367988
+    second: gameover_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +67,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -112,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: trees_0
+      name: gameover_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 224
-        width: 73
-        height: 63
+        x: 0
+        y: 53
+        width: 40
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5a8ef372f4b5c8e0800000000000000
-      internalID: -1673732733077124514
+      spriteID: 1b4722b675f366400800000000000000
+      internalID: 317010468468323505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: trees_1
+      name: gameover_1
       rect:
         serializedVersion: 2
-        x: 125
-        y: 129
-        width: 68
-        height: 153
+        x: 43
+        y: 53
+        width: 42
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f8cf8d84bf48d1230800000000000000
-      internalID: 3611188691014843535
+      spriteID: a4afc24cd39a67e30800000000000000
+      internalID: 4500970960352770634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: trees_2
+      name: gameover_2
       rect:
         serializedVersion: 2
-        x: 243
-        y: 126
-        width: 133
-        height: 159
+        x: 87
+        y: 53
+        width: 42
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +180,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e873f988e3e493f10800000000000000
-      internalID: 2249915519335348110
+      spriteID: 3e1310d4f3185ec60800000000000000
+      internalID: 7846820034637804003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: trees_3
+      name: gameover_3
       rect:
         serializedVersion: 2
-        x: 23
-        y: 114
-        width: 73
-        height: 83
+        x: 132
+        y: 53
+        width: 40
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cefc04740fccd7840800000000000000
-      internalID: 5223556475179290604
+      spriteID: 36614a855fe58ede0800000000000000
+      internalID: -1303687684276611485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: trees_4
+      name: gameover_4
       rect:
         serializedVersion: 2
-        x: 33
-        y: 14
-        width: 53
-        height: 83
+        x: 0
+        y: 0
+        width: 40
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,8 +224,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 92961a45e73745500800000000000000
-      internalID: 384058854656272681
+      spriteID: ed9e0ebb2096b8e10800000000000000
+      internalID: 2200968303363549662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gameover_5
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 0
+        width: 42
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36048b757099f24c0800000000000000
+      internalID: -4310058061554761629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gameover_6
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 0
+        width: 42
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb2050de80f907a0800000000000000
+      internalID: -6410328098414253093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gameover_7
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 40
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc724b1ebe23053c0800000000000000
+      internalID: -4372939249491367988
       vertices: []
       indices: 
       edges: []
@@ -225,14 +300,22 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gameover_0: 317010468468323505
+      gameover_1: 4500970960352770634
+      gameover_2: 7846820034637804003
+      gameover_3: -1303687684276611485
+      gameover_4: 2200968303363549662
+      gameover_5: -4310058061554761629
+      gameover_6: -6410328098414253093
+      gameover_7: -4372939249491367988
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

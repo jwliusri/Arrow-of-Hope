@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 300c6dcc84c33e74b954fbf75d199360
+guid: 61995b91df444e5489ca179c7f4fc160
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3997971038976187057
-    second: field_0
+      213: -3026058171327407114
+    second: restart_0
+  - first:
+      213: -1660317950592455792
+    second: restart_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: field_0
+      name: restart_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 2740
-        height: 1540
+        y: 8
+        width: 58
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ba99705a75ab7730800000000000000
-      internalID: 3997971038976187057
+      spriteID: 6fb9c5c30284106d0800000000000000
+      internalID: -3026058171327407114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: restart_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 0
+        width: 58
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09b6bb4ee9d55f8e0800000000000000
+      internalID: -1660317950592455792
       vertices: []
       indices: 
       edges: []
@@ -125,14 +150,16 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      restart_0: -3026058171327407114
+      restart_1: -1660317950592455792
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
