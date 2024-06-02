@@ -321,7 +321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &231037902
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1580,7 +1580,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &881839587
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6719,12 +6719,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -9
-  m_Sprite: {fileID: 1921053324792869636, guid: 52cb231e0a21d1947aa39daa449465b4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 52cb231e0a21d1947aa39daa449465b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 27.4, y: 5.164258}
+  m_Size: {x: 27.4, y: 5.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6783,8 +6783,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 27.4, y: 5.164258}
-    newSize: {x: 27.4, y: 5.164258}
+    oldSize: {x: 27.4, y: 5.16}
+    newSize: {x: 27.4, y: 5.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -7064,7 +7064,7 @@ Animator:
   m_GameObject: {fileID: 1255495268}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6495c79915167264bb3ac5665c9438c3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 378593f4de321fa49b9a23fd782722ba, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -13242,12 +13242,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 3997971038976187057, guid: 300c6dcc84c33e74b954fbf75d199360, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 300c6dcc84c33e74b954fbf75d199360, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 27.401564, y: 15.400001}
+  m_Size: {x: 27.4, y: 15.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -13301,7 +13301,7 @@ RectTransform:
   m_Father: {fileID: 1031139343}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0.000045776367, y: 0}
   m_SizeDelta: {x: -16, y: -8}
   m_Pivot: {x: 0.5, y: 0.5}
